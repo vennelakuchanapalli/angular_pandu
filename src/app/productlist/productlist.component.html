@@ -1,0 +1,30 @@
+
+<input class="form-control me-2" type="text" placeholder="Filter" aria-label="Search" [(ngModel)]="inputValue">
+<button class="btn btn-outline-success" type="submit">Search</button>
+
+
+<table class="table table-striped table-hover">
+   
+    <thead >
+      <tr>
+        <th scope="col"  *ngFor="let header of tableheader" >{{header}}</th>        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of productlist | pipe : inputValue:'name'">
+    
+        <td>{{product.id}}</td>
+        <td>{{product.name}}</td>
+        <td>{{product.description}}</td>
+        <td>{{product.price}}</td>
+        <td>{{product.sku}}</td>
+        <td>{{product.category}}</td>
+        <td>{{product.stock_quantity}}</td>
+      
+        <td>{{product.created_at}}</td>
+        <td>{{product.updated_at}}</td>
+      </tr>
+    
+    </tbody>
+  </table>
+

@@ -1,0 +1,27 @@
+<!-- <div class="card" style="width: 70rem;">
+    <h1>{{text }}<i class="fa fa-info" (click)="show()" aria-hidden="true"></i></h1>
+</div> -->
+
+
+<app-navbar></app-navbar>
+<div class="card text-center carddive" style="width: 70rem;height: 20rem;" >
+    <div class="card-header">
+        <h1>{{heading}}</h1>
+    </div>
+    <div class="card-body bg">
+        <h5 class="card-title">{{text }} <i class="fa fa-info icon" (click)="show()" aria-hidden="true"></i> </h5>
+        <ng-container *ngIf="isshowinfo">
+            <div class="card infocard">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Maxime porro autem saepe soluta animi,
+                excepturi velit nam accusantium sed pariatur minima
+                deleniti ipsa deserunt consequatur cumque iste! Pariatur,
+                eveniet. Recusandae!
+            </div>
+        </ng-container>
+
+    </div>
+    <div class="card-footer text-muted">
+        {{date | date:'fullDate' }}
+    </div>
+</div>
